@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhotoVideoCapturedViewController" customModule="Camera" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="Ye4-42-A9r" id="Bpt-H5-pDp"/>
+                <outlet property="imageToPreview" destination="Vvl-of-6eX" id="DpS-KX-28R"/>
+                <outlet property="videoview" destination="u87-sc-Gbr" id="UsU-95-NF3"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vvl-of-6eX">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u87-sc-Gbr">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Ye4-42-A9r">
+                    <rect key="frame" x="5" y="562" width="365" height="100"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="0.35467099471830987" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="mig-sr-oi4"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="4" minimumInteritemSpacing="4" id="Rcg-ki-stg">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Vvl-of-6eX" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="2Xm-km-Hwj"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Ye4-42-A9r" secondAttribute="bottom" constant="5" id="Liw-jZ-ban"/>
+                <constraint firstItem="Vvl-of-6eX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="PLA-4g-gqD"/>
+                <constraint firstItem="u87-sc-Gbr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Vs0-zB-l8n"/>
+                <constraint firstItem="u87-sc-Gbr" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="a2f-co-u8Y"/>
+                <constraint firstAttribute="bottom" secondItem="u87-sc-Gbr" secondAttribute="bottom" id="gsp-mf-otg"/>
+                <constraint firstItem="Ye4-42-A9r" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" constant="-5" id="j7x-8w-O03"/>
+                <constraint firstItem="Vvl-of-6eX" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="n7k-eq-IZK"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="u87-sc-Gbr" secondAttribute="trailing" id="oGD-i1-c1c"/>
+                <constraint firstItem="Vvl-of-6eX" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="qo8-Ge-mve"/>
+                <constraint firstItem="Ye4-42-A9r" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="5" id="wtG-va-lAb"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="24.5" y="51.5"/>
+        </view>
+    </objects>
+</document>

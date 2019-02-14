@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageCollectionViewCell" id="pL7-BB-gqE" customClass="ImageCollectionViewCell" customModule="Camera" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="116" height="86"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="116" height="86"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gRn-td-zpo">
+                        <rect key="frame" x="0.0" y="0.0" width="116" height="86"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flash-off.png" translatesAutoresizingMaskIntoConstraints="NO" id="TZC-Z0-tQh">
+                                <rect key="frame" x="2" y="27" width="112" height="57"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ove-c0-vg4">
+                                <rect key="frame" x="0.0" y="0.0" width="116" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="dPj-TL-hrS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Farah" family="Farah" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="TZC-Z0-tQh" secondAttribute="trailing" constant="2" id="80U-6Z-G6T"/>
+                            <constraint firstItem="Ove-c0-vg4" firstAttribute="top" secondItem="gRn-td-zpo" secondAttribute="top" id="DsP-c6-IQm"/>
+                            <constraint firstAttribute="trailing" secondItem="Ove-c0-vg4" secondAttribute="trailing" id="aRp-ey-b71"/>
+                            <constraint firstItem="Ove-c0-vg4" firstAttribute="leading" secondItem="gRn-td-zpo" secondAttribute="leading" id="h5w-Nn-Pmj"/>
+                            <constraint firstItem="TZC-Z0-tQh" firstAttribute="leading" secondItem="gRn-td-zpo" secondAttribute="leading" constant="2" id="jGs-Wp-uCu"/>
+                            <constraint firstAttribute="bottom" secondItem="TZC-Z0-tQh" secondAttribute="bottom" constant="2" id="l4T-XE-kI2"/>
+                            <constraint firstItem="TZC-Z0-tQh" firstAttribute="top" secondItem="Ove-c0-vg4" secondAttribute="bottom" constant="2" id="mDm-jF-Qnb"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="gRn-td-zpo" firstAttribute="top" secondItem="pL7-BB-gqE" secondAttribute="top" id="F6N-rW-Vjw"/>
+                <constraint firstAttribute="bottom" secondItem="gRn-td-zpo" secondAttribute="bottom" id="HaD-RB-ctq"/>
+                <constraint firstAttribute="trailing" secondItem="gRn-td-zpo" secondAttribute="trailing" id="MfS-JZ-MRH"/>
+                <constraint firstItem="gRn-td-zpo" firstAttribute="leading" secondItem="pL7-BB-gqE" secondAttribute="leading" id="msm-ej-dLT"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="eA5-eM-ZAq"/>
+            <size key="customSize" width="116" height="86"/>
+            <connections>
+                <outlet property="filterName" destination="Ove-c0-vg4" id="Bv5-jg-ZOg"/>
+                <outlet property="imageView" destination="TZC-Z0-tQh" id="MnR-ek-Qmq"/>
+            </connections>
+            <point key="canvasLocation" x="126" y="113"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="flash-off.png" width="60" height="60"/>
+    </resources>
+</document>
