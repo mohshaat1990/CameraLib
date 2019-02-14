@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E50D66022212399200E08F0F /* ImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E50D66012212399200E08F0F /* ImageCollectionViewCell.xib */; };
+		E50D6604221239E500E08F0F /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50D6603221239E500E08F0F /* ImageCollectionViewCell.swift */; };
+		E5288C9F220F86CF0046FCE8 /* CameraPinchZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5288C9E220F86CF0046FCE8 /* CameraPinchZoom.swift */; };
+		E5288CA1220F8C610046FCE8 /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5288CA0220F8C610046FCE8 /* CameraController.swift */; };
 		E550DE55220F751F00C9EA70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E550DE54220F751F00C9EA70 /* AppDelegate.swift */; };
 		E550DE57220F751F00C9EA70 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E550DE56220F751F00C9EA70 /* ViewController.swift */; };
 		E550DE5A220F751F00C9EA70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E550DE58220F751F00C9EA70 /* Main.storyboard */; };
@@ -14,7 +18,12 @@
 		E550DE5F220F752100C9EA70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E550DE5D220F752100C9EA70 /* LaunchScreen.storyboard */; };
 		E550DE6A220F752100C9EA70 /* CameraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E550DE69220F752100C9EA70 /* CameraTests.swift */; };
 		E550DE75220F752100C9EA70 /* CameraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E550DE74220F752100C9EA70 /* CameraUITests.swift */; };
-		E550DE84220F758700C9EA70 /* CameraPreview.xib in Resources */ = {isa = PBXBuildFile; fileRef = E550DE83220F758700C9EA70 /* CameraPreview.xib */; };
+		E550DE8E220F760E00C9EA70 /* ExtensionUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E550DE8A220F760E00C9EA70 /* ExtensionUIView.swift */; };
+		E55EF34B2216145600546065 /* ExtensionUiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55EF34A2216145600546065 /* ExtensionUiViewController.swift */; };
+		E5DFE8932210C80800358FCD /* CameraEngineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DFE8912210C80800358FCD /* CameraEngineViewController.swift */; };
+		E5DFE8942210C80800358FCD /* CameraEngineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5DFE8922210C80800358FCD /* CameraEngineViewController.xib */; };
+		E5DFE8972210CB7D00358FCD /* PhotoVideoCapturedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DFE8952210CB7D00358FCD /* PhotoVideoCapturedViewController.swift */; };
+		E5DFE8982210CB7D00358FCD /* PhotoVideoCapturedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5DFE8962210CB7D00358FCD /* PhotoVideoCapturedViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +44,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E50D66012212399200E08F0F /* ImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		E50D6603221239E500E08F0F /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		E5288C9E220F86CF0046FCE8 /* CameraPinchZoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPinchZoom.swift; sourceTree = "<group>"; };
+		E5288CA0220F8C610046FCE8 /* CameraController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
 		E550DE51220F751F00C9EA70 /* Camera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Camera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E550DE54220F751F00C9EA70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E550DE56220F751F00C9EA70 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,7 +61,12 @@
 		E550DE70220F752100C9EA70 /* CameraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CameraUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E550DE74220F752100C9EA70 /* CameraUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraUITests.swift; sourceTree = "<group>"; };
 		E550DE76220F752100C9EA70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E550DE83220F758700C9EA70 /* CameraPreview.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CameraPreview.xib; sourceTree = "<group>"; };
+		E550DE8A220F760E00C9EA70 /* ExtensionUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionUIView.swift; sourceTree = "<group>"; };
+		E55EF34A2216145600546065 /* ExtensionUiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUiViewController.swift; sourceTree = "<group>"; };
+		E5DFE8912210C80800358FCD /* CameraEngineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraEngineViewController.swift; sourceTree = "<group>"; };
+		E5DFE8922210C80800358FCD /* CameraEngineViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CameraEngineViewController.xib; sourceTree = "<group>"; };
+		E5DFE8952210CB7D00358FCD /* PhotoVideoCapturedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoVideoCapturedViewController.swift; sourceTree = "<group>"; };
+		E5DFE8962210CB7D00358FCD /* PhotoVideoCapturedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoVideoCapturedViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +94,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E50D65FA22120B1B00E08F0F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E50D66012212399200E08F0F /* ImageCollectionViewCell.xib */,
+				E5DFE8962210CB7D00358FCD /* PhotoVideoCapturedViewController.xib */,
+				E5DFE8922210C80800358FCD /* CameraEngineViewController.xib */,
+				E550DE5B220F752100C9EA70 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		E550DE48220F751F00C9EA70 = {
 			isa = PBXGroup;
 			children = (
@@ -103,7 +132,6 @@
 				E550DE54220F751F00C9EA70 /* AppDelegate.swift */,
 				E550DE56220F751F00C9EA70 /* ViewController.swift */,
 				E550DE58220F751F00C9EA70 /* Main.storyboard */,
-				E550DE5B220F752100C9EA70 /* Assets.xcassets */,
 				E550DE5D220F752100C9EA70 /* LaunchScreen.storyboard */,
 				E550DE60220F752100C9EA70 /* Info.plist */,
 			);
@@ -131,9 +159,24 @@
 		E550DE82220F752900C9EA70 /* Camera */ = {
 			isa = PBXGroup;
 			children = (
-				E550DE83220F758700C9EA70 /* CameraPreview.xib */,
+				E50D65FA22120B1B00E08F0F /* Resources */,
+				E550DE87220F760E00C9EA70 /* Helpers */,
+				E5288CA0220F8C610046FCE8 /* CameraController.swift */,
+				E5288C9E220F86CF0046FCE8 /* CameraPinchZoom.swift */,
+				E5DFE8952210CB7D00358FCD /* PhotoVideoCapturedViewController.swift */,
+				E50D6603221239E500E08F0F /* ImageCollectionViewCell.swift */,
+				E5DFE8912210C80800358FCD /* CameraEngineViewController.swift */,
 			);
 			path = Camera;
+			sourceTree = "<group>";
+		};
+		E550DE87220F760E00C9EA70 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E550DE8A220F760E00C9EA70 /* ExtensionUIView.swift */,
+				E55EF34A2216145600546065 /* ExtensionUiViewController.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,9 +284,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E550DE5F220F752100C9EA70 /* LaunchScreen.storyboard in Resources */,
-				E550DE84220F758700C9EA70 /* CameraPreview.xib in Resources */,
 				E550DE5C220F752100C9EA70 /* Assets.xcassets in Resources */,
 				E550DE5A220F751F00C9EA70 /* Main.storyboard in Resources */,
+				E5DFE8942210C80800358FCD /* CameraEngineViewController.xib in Resources */,
+				E50D66022212399200E08F0F /* ImageCollectionViewCell.xib in Resources */,
+				E5DFE8982210CB7D00358FCD /* PhotoVideoCapturedViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,8 +313,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5288CA1220F8C610046FCE8 /* CameraController.swift in Sources */,
+				E5288C9F220F86CF0046FCE8 /* CameraPinchZoom.swift in Sources */,
+				E5DFE8932210C80800358FCD /* CameraEngineViewController.swift in Sources */,
+				E5DFE8972210CB7D00358FCD /* PhotoVideoCapturedViewController.swift in Sources */,
+				E550DE8E220F760E00C9EA70 /* ExtensionUIView.swift in Sources */,
+				E50D6604221239E500E08F0F /* ImageCollectionViewCell.swift in Sources */,
 				E550DE57220F751F00C9EA70 /* ViewController.swift in Sources */,
 				E550DE55220F751F00C9EA70 /* AppDelegate.swift in Sources */,
+				E55EF34B2216145600546065 /* ExtensionUiViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

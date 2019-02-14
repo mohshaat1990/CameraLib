@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  Camera
 //
-//  Created by LapStore on 2/9/19.
-//  Copyright © 2019 shaat. All rights reserved.
+//  Created by Mohamed Shaat on 1/24/19.
+//  Copyright © 2019 Mohamed Shaat. All rights reserved.
 //
 
 import UIKit
