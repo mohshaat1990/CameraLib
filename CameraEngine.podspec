@@ -12,7 +12,7 @@ DESC
   s.author           = { '<MOHAMED MAHMOUD>' => '<mohamed.sh3t90@gmail.com>' }
   s.source           = { :git => 'https://github.com/sh3at90/CameraEngine.git', :tag => s.version.to_s  }
  
-  s.ios.deployment_target = '9.4'
+  s.ios.deployment_target = '11.0'
   s.source_files = 'CameraEngine/**/*.{lproj,storyboard,xcdatamodeld,xib,swift}'
  s.resources = 'CameraEngine/**/*.{xcassets,png,json}'
  
