@@ -17,13 +17,14 @@
 		E55EF35B2216354600546065 /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55EF34E2216354600546065 /* CameraController.swift */; };
 		E55EF35C2216354600546065 /* ImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E55EF3502216354600546065 /* ImageCollectionViewCell.xib */; };
 		E55EF35D2216354600546065 /* PhotoVideoCapturedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E55EF3512216354600546065 /* PhotoVideoCapturedViewController.xib */; };
-		E55EF35E2216354600546065 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E55EF3522216354600546065 /* Assets.xcassets */; };
+		E55EF35E2216354600546065 /* CameraAssests.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E55EF3522216354600546065 /* CameraAssests.xcassets */; };
 		E55EF35F2216354600546065 /* CameraEngineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E55EF3532216354600546065 /* CameraEngineViewController.xib */; };
 		E55EF3602216354600546065 /* CameraPinchZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55EF3542216354600546065 /* CameraPinchZoom.swift */; };
 		E55EF3612216354600546065 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55EF3552216354600546065 /* ImageCollectionViewCell.swift */; };
 		E55EF3622216354600546065 /* CameraEngineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55EF3562216354600546065 /* CameraEngineViewController.swift */; };
 		E55EF3632216354600546065 /* ExtensionUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55EF3582216354600546065 /* ExtensionUIView.swift */; };
 		E55EF3642216354600546065 /* ExtensionUiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55EF3592216354600546065 /* ExtensionUiViewController.swift */; };
+		E5D0F58D2216436F001E96DB /* Assests.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5D0F58C2216436F001E96DB /* Assests.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,13 +61,14 @@
 		E55EF34E2216354600546065 /* CameraController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
 		E55EF3502216354600546065 /* ImageCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageCollectionViewCell.xib; sourceTree = "<group>"; };
 		E55EF3512216354600546065 /* PhotoVideoCapturedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoVideoCapturedViewController.xib; sourceTree = "<group>"; };
-		E55EF3522216354600546065 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E55EF3522216354600546065 /* CameraAssests.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CameraAssests.xcassets; sourceTree = "<group>"; };
 		E55EF3532216354600546065 /* CameraEngineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraEngineViewController.xib; sourceTree = "<group>"; };
 		E55EF3542216354600546065 /* CameraPinchZoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraPinchZoom.swift; sourceTree = "<group>"; };
 		E55EF3552216354600546065 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		E55EF3562216354600546065 /* CameraEngineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraEngineViewController.swift; sourceTree = "<group>"; };
 		E55EF3582216354600546065 /* ExtensionUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionUIView.swift; sourceTree = "<group>"; };
 		E55EF3592216354600546065 /* ExtensionUiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionUiViewController.swift; sourceTree = "<group>"; };
+		E5D0F58C2216436F001E96DB /* Assests.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assests.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				E550DE58220F751F00C9EA70 /* Main.storyboard */,
 				E550DE5D220F752100C9EA70 /* LaunchScreen.storyboard */,
 				E550DE60220F752100C9EA70 /* Info.plist */,
+				E5D0F58C2216436F001E96DB /* Assests.xcassets */,
 			);
 			path = Camera;
 			sourceTree = "<group>";
@@ -164,7 +167,7 @@
 			children = (
 				E55EF3502216354600546065 /* ImageCollectionViewCell.xib */,
 				E55EF3512216354600546065 /* PhotoVideoCapturedViewController.xib */,
-				E55EF3522216354600546065 /* Assets.xcassets */,
+				E55EF3522216354600546065 /* CameraAssests.xcassets */,
 				E55EF3532216354600546065 /* CameraEngineViewController.xib */,
 			);
 			path = Resources;
@@ -285,10 +288,11 @@
 			files = (
 				E550DE5F220F752100C9EA70 /* LaunchScreen.storyboard in Resources */,
 				E55EF35F2216354600546065 /* CameraEngineViewController.xib in Resources */,
+				E5D0F58D2216436F001E96DB /* Assests.xcassets in Resources */,
 				E55EF35D2216354600546065 /* PhotoVideoCapturedViewController.xib in Resources */,
 				E55EF35C2216354600546065 /* ImageCollectionViewCell.xib in Resources */,
 				E550DE5A220F751F00C9EA70 /* Main.storyboard in Resources */,
-				E55EF35E2216354600546065 /* Assets.xcassets in Resources */,
+				E55EF35E2216354600546065 /* CameraAssests.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,7 +497,7 @@
 		E550DE7A220F752100C9EA70 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 368YH886R9;
 				INFOPLIST_FILE = Camera/Info.plist;
@@ -511,7 +515,7 @@
 		E550DE7B220F752100C9EA70 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 368YH886R9;
 				INFOPLIST_FILE = Camera/Info.plist;
