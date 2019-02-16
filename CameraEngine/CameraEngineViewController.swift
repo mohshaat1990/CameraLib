@@ -119,6 +119,7 @@ public class CameraEngineViewController: UIViewController {
         } else {
             flashButton.setBackgroundImage(#imageLiteral(resourceName: "ic_flash_off"), for: .normal)
         }
+        cameraController?.flashType = flashType
     }
     
     func startCamera(cameraType: cameraType){

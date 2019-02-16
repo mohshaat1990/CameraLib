@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         cameraViewController.delegate = self
         cameraViewController.maximumVideoDurationLimit = 60
         cameraViewController.cameraPosition = .back
-        cameraViewController.flashType = .on
+        cameraViewController.flashType = .auto
         showCameraEngine(cameraEngineViewController: cameraViewController)
     }
     
