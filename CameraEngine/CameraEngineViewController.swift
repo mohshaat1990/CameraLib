@@ -11,7 +11,7 @@ import MediaPlayer
 
 public protocol cameraEngineDelegate {
    func didSelect(originalImage: UIImage,filteredImage: UIImage)
-   func didSelect(videoUrl: URL)
+    func didSelect(videoUrl: URL , thumbnail: UIImage?)
 }
 public class CameraEngineViewController: UIViewController {
     
@@ -105,15 +105,18 @@ public class CameraEngineViewController: UIViewController {
     }
     
     @IBAction func flashAction(_ sender: Any) {
+        if flashType == .on {
+          flashType = .auto
+        } else {
+          flashType = .on
+        }
         setupFlash()
     }
     
     func setupFlash(){
-        if flashType == .auto {
-            flashType = .on
+        if flashType == .on {
             flashButton.setBackgroundImage(#imageLiteral(resourceName: "ic_flash_on"), for: .normal)
         } else {
-            flashType = .auto
             flashButton.setBackgroundImage(#imageLiteral(resourceName: "ic_flash_off"), for: .normal)
         }
     }
@@ -188,7 +191,7 @@ public class CameraEngineViewController: UIViewController {
     }
     
     @objc func updateTimer() {
-        if let mximumVideoCatureLimit = maximumVideoDurationLimit , mximumVideoCatureLimit <= (count + 1) {
+        if let mximumVideoCatureLimit = maximumVideoDurationLimit , mximumVideoCatureLimit < (count + 1) {
             stopRecording()
         } else if(count >= 0){
             let hours  = count / 3600
@@ -204,15 +207,14 @@ public class CameraEngineViewController: UIViewController {
 }
 
 extension CameraEngineViewController: cameraEngineDelegate {
+    public func didSelect(videoUrl: URL, thumbnail: UIImage?) {
+         self.dismiss(animated: true, completion: nil)
+        self.delegate?.didSelect(videoUrl: videoUrl, thumbnail: thumbnail)
+    }
+    
     public func didSelect(originalImage: UIImage, filteredImage: UIImage) {
-     self.delegate?.didSelect(originalImage:originalImage, filteredImage: filteredImage)
      self.dismiss(animated: true, completion: nil)
+     self.delegate?.didSelect(originalImage:originalImage, filteredImage: filteredImage)
     }
-    
-    public func didSelect(videoUrl: URL) {
-        self.delegate?.didSelect(videoUrl: videoUrl)
-        self.dismiss(animated: true, completion: nil)
-    }
-    
-    
+
 }

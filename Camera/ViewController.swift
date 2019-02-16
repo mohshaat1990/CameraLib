@@ -25,14 +25,12 @@ class ViewController: UIViewController {
     
 }
 extension ViewController: cameraEngineDelegate {
+    func didSelect(videoUrl: URL, thumbnail: UIImage?) {
+      
+    }
+    
     
     func didSelect(originalImage: UIImage, filteredImage: UIImage) {
         
     }
-    
-    func didSelect(videoUrl: URL) {
-        
-    }
-    
-    
 }

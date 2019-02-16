@@ -22,8 +22,8 @@
 		E55EF3602216354600546065 /* CameraPinchZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55EF3542216354600546065 /* CameraPinchZoom.swift */; };
 		E55EF3612216354600546065 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55EF3552216354600546065 /* ImageCollectionViewCell.swift */; };
 		E55EF3622216354600546065 /* CameraEngineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55EF3562216354600546065 /* CameraEngineViewController.swift */; };
-		E55EF3632216354600546065 /* ExtensionUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55EF3582216354600546065 /* ExtensionUIView.swift */; };
-		E55EF3642216354600546065 /* ExtensionUiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55EF3592216354600546065 /* ExtensionUiViewController.swift */; };
+		E5A697EE2217884800ADA425 /* ExtensionUIViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A697EC2217884800ADA425 /* ExtensionUIViewHelper.swift */; };
+		E5A697EF2217884800ADA425 /* ExtensionUiViewControllerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A697ED2217884800ADA425 /* ExtensionUiViewControllerHelper.swift */; };
 		E5D0F58D2216436F001E96DB /* Assests.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5D0F58C2216436F001E96DB /* Assests.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -66,8 +66,8 @@
 		E55EF3542216354600546065 /* CameraPinchZoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraPinchZoom.swift; sourceTree = "<group>"; };
 		E55EF3552216354600546065 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		E55EF3562216354600546065 /* CameraEngineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraEngineViewController.swift; sourceTree = "<group>"; };
-		E55EF3582216354600546065 /* ExtensionUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionUIView.swift; sourceTree = "<group>"; };
-		E55EF3592216354600546065 /* ExtensionUiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionUiViewController.swift; sourceTree = "<group>"; };
+		E5A697EC2217884800ADA425 /* ExtensionUIViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionUIViewHelper.swift; sourceTree = "<group>"; };
+		E5A697ED2217884800ADA425 /* ExtensionUiViewControllerHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionUiViewControllerHelper.swift; sourceTree = "<group>"; };
 		E5D0F58C2216436F001E96DB /* Assests.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assests.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -151,11 +151,11 @@
 		E55EF34C2216354600546065 /* CameraEngine */ = {
 			isa = PBXGroup;
 			children = (
-				E55EF34D2216354600546065 /* PhotoVideoCapturedViewController.swift */,
-				E55EF34E2216354600546065 /* CameraController.swift */,
 				E55EF34F2216354600546065 /* Resources */,
 				E55EF3542216354600546065 /* CameraPinchZoom.swift */,
 				E55EF3552216354600546065 /* ImageCollectionViewCell.swift */,
+				E55EF34D2216354600546065 /* PhotoVideoCapturedViewController.swift */,
+				E55EF34E2216354600546065 /* CameraController.swift */,
 				E55EF3562216354600546065 /* CameraEngineViewController.swift */,
 				E55EF3572216354600546065 /* Helpers */,
 			);
@@ -176,8 +176,8 @@
 		E55EF3572216354600546065 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				E55EF3582216354600546065 /* ExtensionUIView.swift */,
-				E55EF3592216354600546065 /* ExtensionUiViewController.swift */,
+				E5A697ED2217884800ADA425 /* ExtensionUiViewControllerHelper.swift */,
+				E5A697EC2217884800ADA425 /* ExtensionUIViewHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -323,9 +323,9 @@
 				E550DE57220F751F00C9EA70 /* ViewController.swift in Sources */,
 				E55EF3602216354600546065 /* CameraPinchZoom.swift in Sources */,
 				E55EF35B2216354600546065 /* CameraController.swift in Sources */,
-				E55EF3632216354600546065 /* ExtensionUIView.swift in Sources */,
+				E5A697EE2217884800ADA425 /* ExtensionUIViewHelper.swift in Sources */,
+				E5A697EF2217884800ADA425 /* ExtensionUiViewControllerHelper.swift in Sources */,
 				E550DE55220F751F00C9EA70 /* AppDelegate.swift in Sources */,
-				E55EF3642216354600546065 /* ExtensionUiViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

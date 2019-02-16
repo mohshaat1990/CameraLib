@@ -27,9 +27,9 @@ public enum flashType {
 class CameraController: NSObject {
     
     var previewView:UIView?
-    var photoOutput: AVCapturePhotoOutput?
+    var photoOutput = AVCapturePhotoOutput()
     var previewLayer:AVCaptureVideoPreviewLayer!
-    var videoOutput: AVCaptureMovieFileOutput?
+    var videoOutput = AVCaptureMovieFileOutput()
     var captureDevice : AVCaptureDevice!
     let session = AVCaptureSession()
      var flashType: flashType = .on
@@ -79,12 +79,6 @@ extension CameraController {
             if let audioInput = audioInput {
             try self.session.addInput(AVCaptureDeviceInput(device: audioInput))
             }
-            previewLayer = AVCaptureVideoPreviewLayer(session: self.session)
-            previewLayer.videoGravity = AVLayerVideoGravity.resizeAspect
-            let rootLayer :CALayer = (self.previewView?.layer)!
-            rootLayer.masksToBounds=true
-            previewLayer.frame = rootLayer.bounds
-            rootLayer.addSublayer(self.previewLayer)
             if cameratype == .photo {
             try configurePhotoOutput()
             } else {
@@ -97,43 +91,52 @@ extension CameraController {
     }
     
     func configurePhotoOutput() throws {
-        self.photoOutput = AVCapturePhotoOutput()
-    self.photoOutput!.setPreparedPhotoSettingsArray([AVCapturePhotoSettings(format: [AVVideoCodecKey : AVVideoCodecType.jpeg])], completionHandler: nil)
-        if session.canAddOutput(self.photoOutput!) { session.addOutput(self.photoOutput!) }
+        if session.canAddOutput(photoOutput) {
+            photoOutput.isHighResolutionCaptureEnabled = true
+            session.addOutput(photoOutput)
+            setupPreview()
+            session.startRunning()
+        }
+       
+    }
+    
+    func setupPreview() {
+        previewLayer = AVCaptureVideoPreviewLayer(session: self.session)
+        previewLayer.videoGravity = AVLayerVideoGravity.resizeAspect
+        let rootLayer :CALayer = (self.previewView?.layer)!
+        rootLayer.masksToBounds=true
+        previewLayer.frame = rootLayer.bounds
+        rootLayer.addSublayer(self.previewLayer)
         session.startRunning()
     }
     
     func captureImage(completion: @escaping (UIImage?, Error?) -> Void) {
         let settings = AVCapturePhotoSettings()
+        let previewPixelType = settings.availablePreviewPhotoPixelFormatTypes.first!
+        let previewFormat = [kCVPixelBufferPixelFormatTypeKey as String: previewPixelType,
+                             kCVPixelBufferWidthKey as String: 160,
+                             kCVPixelBufferHeightKey as String: 160]
+        settings.previewPhotoFormat = previewFormat
         if flashType == .auto {
          settings.flashMode = .auto
         } else {
          settings.flashMode = .on
         }
-        self.photoOutput?.capturePhoto(with: settings, delegate: self)
+        self.photoOutput.capturePhoto(with: settings, delegate: self)
         self.photoCaptureCompletionBlock = completion
     }
     
     func configureVideo() throws {
         
         videoOutput = AVCaptureMovieFileOutput()
-        let totalSeconds = 60.0 //Total Seconds of capture time
-        let timeScale: Int32 = 30 //FPS
-        let maxDuration = CMTimeMakeWithSeconds(totalSeconds, timeScale)
-        videoOutput?.maxRecordedDuration = maxDuration
-        videoOutput?.minFreeDiskSpaceLimit = 1024 * 1024
-        if session.canAddOutput(videoOutput!) {
-            session.addOutput(videoOutput!)
+        if session.canAddOutput(videoOutput) {
+            session.addOutput(videoOutput)
+            setupPreview()
+            session.startRunning()
         }
-        session.startRunning()
-        
     }
     
      func captureVideo(completion: @escaping (URL?, Error?) -> Void) {
-        guard let videoOutput = videoOutput else {
-            return
-        }
-  
             let outputPath = "\(NSTemporaryDirectory())output.mov"
             let outputURL = URL(fileURLWithPath: outputPath)
             
@@ -151,9 +154,6 @@ extension CameraController {
     }
     
     func stopRecording(){
-        guard let videoOutput = videoOutput else {
-            return
-        }
         videoOutput.stopRecording()
     }
     
@@ -168,7 +168,7 @@ extension CameraController: AVCapturePhotoCaptureDelegate {
                             resolvedSettings: AVCaptureResolvedPhotoSettings, bracketSettings: AVCaptureBracketedStillImageSettings?, error: Swift.Error?) {
         if let error = error { self.photoCaptureCompletionBlock?(nil, error) }
             
-        else if let buffer = photoSampleBuffer, let data = AVCapturePhotoOutput.jpegPhotoDataRepresentation(forJPEGSampleBuffer: buffer, previewPhotoSampleBuffer: nil),
+        else if let buffer = photoSampleBuffer,let photoPreviewBuffer = previewPhotoSampleBuffer, let data = AVCapturePhotoOutput.jpegPhotoDataRepresentation(forJPEGSampleBuffer: buffer, previewPhotoSampleBuffer: photoPreviewBuffer),
             let image = UIImage(data: data) {
             self.photoCaptureCompletionBlock?(image, nil)
         }

@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
-  s.name             = 'CameraEngine'
-  s.version          = '0.1.1'
+  s.name             = 'CameraLib'
+  s.version          = '1.2'
   s.summary          = 'Custom Camera (photo & video)with Filters support zoom and flash'
   s.description      = <<-DESC
 Custom Camera (photo & video)with Filters support zoom and flash
