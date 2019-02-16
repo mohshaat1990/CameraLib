@@ -13,7 +13,7 @@
 
 using pods
 ```bash
-pod 'CameraLib', '~> 1.2'
+pod 'CameraLib', '~> 1.5'
 ```
 
 ## Usage
@@ -38,13 +38,13 @@ pod 'CameraLib', '~> 1.2'
 
 ```swift
 extension ViewController: cameraEngineDelegate {
-
-    func didSelect(originalImage: UIImage, filteredImage: UIImage) {        
-
+    func didSelect(videoUrl: URL, thumbnail: UIImage?) {
+      
     }
-
-    func didSelect(videoUrl: URL) {   
-
+    
+    
+    func didSelect(originalImage: UIImage, filteredImage: UIImage) {
+        
     }
 }
 
