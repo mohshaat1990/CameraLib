@@ -20,7 +20,7 @@ public class CameraEngineViewController: UIViewController {
     @IBOutlet weak var labelCounting: UILabel!
     @IBOutlet weak var flipImageView: UIImageView!
     @IBOutlet weak var flipButton: UIButton!
-    @IBOutlet weak var flashButton: UIButton!
+    @IBOutlet weak var flashImage: UIImageView!
     var cameraController: CameraController?
     public var cameraPosition: cameraPosition = .back
     var currentCameraType:cameraType = .photo
@@ -115,9 +115,9 @@ public class CameraEngineViewController: UIViewController {
     
     func setupFlash(){
         if flashType == .on {
-         flashButton.setBackgroundImage(UIImage(named:"ic_flash_on"), for: .normal)
+         flashImage.image = UIImage(named:"ic_flash_on")
         } else {
-          flashButton.setBackgroundImage(UIImage(named:"ic_flash_off"), for: .normal)
+         flashImage.image = UIImage(named:"ic_flash_off")
         }
         cameraController?.flashType = flashType
     }

@@ -18,7 +18,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CameraEngineViewController" customModule="Camera" customModuleProvider="target">
             <connections>
                 <outlet property="captureButton" destination="De9-g0-ShF" id="ul5-XI-odc"/>
-                <outlet property="flashButton" destination="TWe-Yo-Ofc" id="iD9-hP-aVB"/>
+                <outlet property="flashImage" destination="bNh-gR-6KG" id="nSY-du-Fis"/>
                 <outlet property="flipButton" destination="Yf1-xT-y4p" id="XO4-q8-cbz"/>
                 <outlet property="flipImageView" destination="GCe-OO-lu4" id="KdU-6m-QzC"/>
                 <outlet property="labelCounting" destination="2dK-KG-6Qf" id="ySE-Gi-N33"/>
@@ -44,15 +44,6 @@
                     </constraints>
                     <state key="normal" image="ic_camera_shot"/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TWe-Yo-Ofc">
-                    <rect key="frame" x="38" y="599" width="30" height="30"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="30" id="S6f-XP-UBl"/>
-                        <constraint firstAttribute="width" constant="30" id="hbU-AO-fOz"/>
-                    </constraints>
-                    <state key="normal" backgroundImage="ic_flash_on"/>
-                </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dK-KG-6Qf">
                     <rect key="frame" x="293" y="35" width="67" height="33"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
@@ -76,13 +67,14 @@
                     <state key="normal" image="ic_close"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yf1-xT-y4p">
-                    <rect key="frame" x="305" y="594" width="73" height="65"/>
+                    <rect key="frame" x="293" y="592" width="73" height="65"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <connections>
                         <action selector="flipAction:" destination="-1" eventType="touchUpInside" id="Iqf-6K-3FV"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fae-Cs-ioQ">
-                    <rect key="frame" x="16" y="588" width="71" height="52"/>
+                    <rect key="frame" x="25" y="588" width="71" height="52"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="71" id="FZv-MZ-nv7"/>
                         <constraint firstAttribute="height" constant="52" id="bQ7-jA-hAx"/>
@@ -91,8 +83,15 @@
                         <action selector="flashAction:" destination="-1" eventType="touchUpInside" id="Dcb-o0-iep"/>
                     </connections>
                 </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_switch_camera" translatesAutoresizingMaskIntoConstraints="NO" id="bNh-gR-6KG">
+                    <rect key="frame" x="40" y="602" width="28" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="28" id="5oh-78-TQE"/>
+                        <constraint firstAttribute="height" constant="30" id="U12-WT-UT7"/>
+                    </constraints>
+                </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_switch_camera" translatesAutoresizingMaskIntoConstraints="NO" id="GCe-OO-lu4">
-                    <rect key="frame" x="305" y="594" width="35" height="38"/>
+                    <rect key="frame" x="300" y="594" width="35" height="38"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="35" id="29o-N6-Q7i"/>
                         <constraint firstAttribute="height" constant="38" id="qKP-3w-bMv"/>
@@ -113,26 +112,26 @@
             <constraints>
                 <constraint firstItem="UdF-AM-5yo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="0wQ-gw-jYX"/>
                 <constraint firstItem="UdF-AM-5yo" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="1Me-zc-7gV"/>
-                <constraint firstItem="TWe-Yo-Ofc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="38" id="3lM-Kd-iFk"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="bNh-gR-6KG" secondAttribute="bottom" constant="35" id="2pl-WR-hiW"/>
                 <constraint firstItem="De9-g0-ShF" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Cyr-Uw-6Zd"/>
-                <constraint firstItem="Yf1-xT-y4p" firstAttribute="trailing" secondItem="GCe-OO-lu4" secondAttribute="trailing" constant="38" id="DjI-Wi-D0C"/>
-                <constraint firstItem="Yf1-xT-y4p" firstAttribute="top" secondItem="GCe-OO-lu4" secondAttribute="top" id="MMK-TE-ZhK"/>
-                <constraint firstItem="Yf1-xT-y4p" firstAttribute="leading" secondItem="GCe-OO-lu4" secondAttribute="leading" id="MrB-QD-0mD"/>
+                <constraint firstItem="Yf1-xT-y4p" firstAttribute="trailing" secondItem="GCe-OO-lu4" secondAttribute="trailing" constant="31" id="DjI-Wi-D0C"/>
+                <constraint firstItem="Yf1-xT-y4p" firstAttribute="top" secondItem="GCe-OO-lu4" secondAttribute="top" constant="-2" id="MMK-TE-ZhK"/>
+                <constraint firstItem="Yf1-xT-y4p" firstAttribute="leading" secondItem="GCe-OO-lu4" secondAttribute="leading" constant="-7" id="MrB-QD-0mD"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2dK-KG-6Qf" secondAttribute="trailing" constant="15" id="NhA-Ua-2ua"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="AvO-iJ-fX3" secondAttribute="trailing" id="O2d-ho-kat"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="TWe-Yo-Ofc" secondAttribute="bottom" constant="38" id="REx-nF-Tvv"/>
                 <constraint firstItem="AvO-iJ-fX3" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="RrA-5N-fub"/>
                 <constraint firstItem="Jbd-Hi-ECH" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="T5i-3T-Ebi"/>
+                <constraint firstItem="bNh-gR-6KG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="TcD-Ie-S5p"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="AvO-iJ-fX3" secondAttribute="bottom" id="XOe-eK-BE0"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="fae-Cs-ioQ" secondAttribute="bottom" constant="27" id="c9z-me-xne"/>
                 <constraint firstItem="AvO-iJ-fX3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="fSx-1H-G4x"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="De9-g0-ShF" secondAttribute="bottom" constant="27" id="fZ6-gW-UdK"/>
                 <constraint firstItem="2dK-KG-6Qf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="gqa-7W-iF9"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="GCe-OO-lu4" secondAttribute="trailing" constant="35" id="kQR-md-HHy"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="GCe-OO-lu4" secondAttribute="trailing" constant="40" id="kQR-md-HHy"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="GCe-OO-lu4" secondAttribute="bottom" constant="35" id="ogJ-DP-LOw"/>
                 <constraint firstItem="Jbd-Hi-ECH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="q66-Bg-tUd"/>
-                <constraint firstItem="Yf1-xT-y4p" firstAttribute="bottom" secondItem="GCe-OO-lu4" secondAttribute="bottom" constant="27" id="sNm-4g-zJl"/>
-                <constraint firstItem="fae-Cs-ioQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="z91-tF-kso"/>
+                <constraint firstItem="Yf1-xT-y4p" firstAttribute="bottom" secondItem="GCe-OO-lu4" secondAttribute="bottom" constant="25" id="sNm-4g-zJl"/>
+                <constraint firstItem="fae-Cs-ioQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="z91-tF-kso"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="-74.400000000000006" y="90.404797601199405"/>
@@ -141,7 +140,6 @@
     <resources>
         <image name="ic_camera_shot" width="84" height="84"/>
         <image name="ic_close" width="22" height="22"/>
-        <image name="ic_flash_on" width="34" height="43"/>
         <image name="ic_switch_camera" width="45" height="38"/>
     </resources>
 </document>
