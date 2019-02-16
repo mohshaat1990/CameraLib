@@ -75,7 +75,8 @@ class PhotoVideoCapturedViewController: UIViewController {
         }
     }
     func addDoneBarButton() {
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image:UIImage(named:"ic_done_shot"), style: .plain, target: self, action: #selector(done))
+        let bundle = Bundle(for: CameraEngineViewController.classForCoder())
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image:UIImage(named:"ic_done_shot", in: bundle,compatibleWith: nil), style: .plain, target: self, action: #selector(done))
     }
     
     func setupNavigationBarColor() {

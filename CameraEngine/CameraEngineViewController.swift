@@ -114,10 +114,11 @@ public class CameraEngineViewController: UIViewController {
     }
     
     func setupFlash(){
+        let bundle = Bundle(for: CameraEngineViewController.classForCoder())
         if flashType == .on {
-         flashImage.image = UIImage(named:"ic_flash_on")
+         flashImage.image = UIImage(named:"ic_flash_on", in: bundle,compatibleWith: nil)
         } else {
-         flashImage.image = UIImage(named:"ic_flash_off")
+          flashImage.image = UIImage(named:"ic_flash_off", in: bundle,compatibleWith: nil)
         }
         cameraController?.flashType = flashType
     }
