@@ -40,7 +40,6 @@ public class CameraEngineViewController: UIViewController {
     override public func viewDidLoad() {
         super.viewDidLoad()
         setupButtonAction()
-        startCamera(cameraType: .photo)
         setupPinchGesture()
         // Do any additional setup after loading the view.
     }
@@ -53,6 +52,10 @@ public class CameraEngineViewController: UIViewController {
         setupFlash()
     }
     
+    override public func viewDidLayoutSubviews() {
+        startCamera(cameraType: .photo)
+    }
+   
     func setupNavigation(){
         self.title = ""
         self.navigationController?.navigationBar.topItem?.title = ""
