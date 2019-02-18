@@ -43,7 +43,7 @@ extension CameraEngineViewController: UIGestureRecognizerDelegate {
     func setupPinchGesture(){
         self.pinchGesture.delegate = self
         self.pinchGesture = UIPinchGestureRecognizer(target: self, action:#selector(CameraEngineViewController.pinch(_:)))
-        self.previewView.addGestureRecognizer(self.pinchGesture)
+        self.view.addGestureRecognizer(self.pinchGesture)
     }
     
 }

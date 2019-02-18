@@ -178,7 +178,7 @@ extension CameraController: AVCapturePhotoCaptureDelegate {
             let dataProvider = CGDataProvider(data: dataImage as CFData)
             let cgImageRef: CGImage! = CGImage(jpegDataProviderSource: dataProvider!, decode: nil, shouldInterpolate: true, intent: .defaultIntent)
             let image = UIImage(cgImage: cgImageRef, scale: 1.0, orientation: UIImageOrientation.right)
-            
+            self.session.stopRunning()
             self.photoCaptureCompletionBlock?(image, nil)
         } else {
             print("some error here")
@@ -188,6 +188,7 @@ extension CameraController: AVCapturePhotoCaptureDelegate {
 
 extension CameraController: AVCaptureFileOutputRecordingDelegate {
     func fileOutput(_ output: AVCaptureFileOutput, didFinishRecordingTo outputFileURL: URL, from connections: [AVCaptureConnection], error: Error?) {
+        self.session.stopRunning()
         self.videoCaptureCompletionBlock?(outputFileURL,nil)
     }
 }

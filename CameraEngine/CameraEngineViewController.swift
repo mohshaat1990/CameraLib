@@ -39,9 +39,10 @@ public class CameraEngineViewController: UIViewController {
     
     override public func viewDidLoad() {
         super.viewDidLoad()
+        previewView.frame = CGRect(x: 0, y: 0, width:  UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
         setupButtonAction()
         setupPinchGesture()
-        // Do any additional setup after loading the view.
+        self.startCamera(cameraType: .photo)
     }
     
     override public func viewWillAppear(_ animated: Bool) {
@@ -51,11 +52,6 @@ public class CameraEngineViewController: UIViewController {
         addObserverForVolumeButton()
         setupFlash()
     }
-    
-    override public func viewDidLayoutSubviews() {
-        startCamera(cameraType: .photo)
-    }
-   
     func setupNavigation(){
         self.title = ""
         self.navigationController?.navigationBar.topItem?.title = ""
@@ -76,7 +72,9 @@ public class CameraEngineViewController: UIViewController {
     }
     
     @IBAction func dismissAction(_ sender: Any) {
+     
         self.dismiss(animated: true, completion: nil)
+           cameraController?.session.stopRunning()
     }
     
     func addObserverForVolumeButton() {
@@ -140,6 +138,7 @@ public class CameraEngineViewController: UIViewController {
                 print(error ?? "Image capture error")
                 return
             }
+              self.startCamera(cameraType: .photo)
             let bundle = Bundle(for: CameraEngineViewController.classForCoder())
             let photoVideoCapturedViewController = PhotoVideoCapturedViewController(nibName: "PhotoVideoCapturedViewController", bundle: bundle)
             photoVideoCapturedViewController.image = image
@@ -165,6 +164,7 @@ public class CameraEngineViewController: UIViewController {
                 return
             }
             let bundle = Bundle(for: CameraEngineViewController.classForCoder())
+              self.startCamera(cameraType: .photo)
             let photoVideoCapturedViewController = PhotoVideoCapturedViewController(nibName: "PhotoVideoCapturedViewController", bundle: bundle)
             photoVideoCapturedViewController.videoURl = url
              photoVideoCapturedViewController.delegate = self

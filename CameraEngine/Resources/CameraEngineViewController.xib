@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -31,8 +31,9 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AvO-iJ-fX3">
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AvO-iJ-fX3">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="De9-g0-ShF">
@@ -116,8 +117,6 @@
                 <constraint firstItem="De9-g0-ShF" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Cyr-Uw-6Zd"/>
                 <constraint firstItem="Yf1-xT-y4p" firstAttribute="trailing" secondItem="GCe-OO-lu4" secondAttribute="trailing" constant="31" id="DjI-Wi-D0C"/>
                 <constraint firstItem="Yf1-xT-y4p" firstAttribute="top" secondItem="GCe-OO-lu4" secondAttribute="top" constant="-2" id="MMK-TE-ZhK"/>
-                <constraint firstItem="AvO-iJ-fX3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="MSs-it-XDV"/>
-                <constraint firstItem="AvO-iJ-fX3" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Mmt-nh-sw1"/>
                 <constraint firstItem="Yf1-xT-y4p" firstAttribute="leading" secondItem="GCe-OO-lu4" secondAttribute="leading" constant="-7" id="MrB-QD-0mD"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2dK-KG-6Qf" secondAttribute="trailing" constant="15" id="NhA-Ua-2ua"/>
                 <constraint firstItem="Jbd-Hi-ECH" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="T5i-3T-Ebi"/>
@@ -129,8 +128,6 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="GCe-OO-lu4" secondAttribute="bottom" constant="35" id="ogJ-DP-LOw"/>
                 <constraint firstItem="Jbd-Hi-ECH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="q66-Bg-tUd"/>
                 <constraint firstItem="Yf1-xT-y4p" firstAttribute="bottom" secondItem="GCe-OO-lu4" secondAttribute="bottom" constant="25" id="sNm-4g-zJl"/>
-                <constraint firstItem="AvO-iJ-fX3" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="tNm-37-G0C"/>
-                <constraint firstItem="AvO-iJ-fX3" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="vCa-1o-UHa"/>
                 <constraint firstItem="fae-Cs-ioQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="z91-tF-kso"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
@@ -139,7 +136,7 @@
     </objects>
     <resources>
         <image name="ic_camera_shot" width="84" height="84"/>
-        <image name="ic_close" width="22" height="22"/>
-        <image name="ic_switch_camera" width="45" height="38"/>
+        <image name="ic_close" width="22.5" height="22.5"/>
+        <image name="ic_switch_camera" width="45.5" height="38.5"/>
     </resources>
 </document>

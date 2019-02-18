@@ -48,7 +48,7 @@ class PhotoVideoCapturedViewController: UIViewController {
 
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewDidLayoutSubviews() {
         setupView()
         setupNavigationBarColor()
         addDoneBarButton()
