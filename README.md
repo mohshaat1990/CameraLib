@@ -13,7 +13,7 @@
 
 using pods
 ```bash
-pod 'CameraLib', '~> 2.0'
+pod 'CameraLib', '~> 2.1'
 ```
 
 ## Usage
