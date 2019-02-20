@@ -1,6 +1,7 @@
 
 # CameraLib
 - Support Image and Video Capture
+- Video Capture Press & Hold
 - Support Zoom 
 - Support Flash
 - Support Most types Of Filters
@@ -13,7 +14,7 @@
 
 using pods
 ```bash
-pod 'CameraLib', '~> 2.1'
+pod 'CameraLib', '~> 2.2'
 ```
 
 ## Usage
