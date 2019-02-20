@@ -97,21 +97,25 @@ public class CameraEngineViewController: UIViewController {
     }
     
     @IBAction func flipAction(_ sender: Any) {
+        if isRecording == false {
         if cameraPosition == .back {
             cameraPosition = .front
         } else {
             cameraPosition = .back
         }
         startCamera(cameraType: currentCameraType)
+        }
     }
     
     @IBAction func flashAction(_ sender: Any) {
+        if isRecording == false {
         if flashType == .on {
           flashType = .auto
         } else {
           flashType = .on
         }
         setupFlash()
+        }
     }
     
     func setupFlash(){
