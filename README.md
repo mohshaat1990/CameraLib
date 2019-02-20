@@ -1,7 +1,7 @@
 
 # CameraLib
 - Support Image and Video Capture
-- Video Capture Press & Hold
+- Video Capture long press
 - Support Zoom 
 - Support Flash
 - Support Most types Of Filters
